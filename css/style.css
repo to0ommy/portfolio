@@ -1,0 +1,175 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 1;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+header {
+    transition: all 0.3s ease; 
+}
+
+header.shrink {
+    padding: 5px 5px; /* Reduce padding to make the header smaller */
+}
+
+header.shrink {
+    background: #222;
+}
+
+
+
+
+header nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    scroll-margin-top: 90px; /*offset of jump */
+}
+
+
+#projects img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+#projects .project {
+    display: flex; /* Align items side by side */
+    align-items: center; /* Vertically align items */
+    margin-bottom: 20px; /* Add space between projects */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+#projects .project img {
+    width: 50%; /* Set the image width to 40% of the container */
+    max-width: 200px; /* Optional: limit the max width */
+    border-radius: 10px;
+    margin-right: 20px; /* Add space between image and description */
+}
+
+#projects .project .description {
+    flex: 1; /* Allow the description to take up remaining space */
+}
+
+#projects .project h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+#projects .project p {
+    margin: 10px 0 0;
+    line-height: 1.6;
+    color: #555;
+}
+/* Projects Slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 800px; /* Adjust width as needed */
+    margin: 20px auto;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.slide {
+    display: none; /* Hide all slides by default */
+    text-align: center;
+}
+.slide:first-child{
+    display: block;
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.description {
+    margin-top: 15px;
+}
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(242, 237, 237, 0.5);
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(192, 188, 188, 0.8);
+}
+
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 5px 10px;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}

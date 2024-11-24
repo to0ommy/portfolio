@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Your content -->
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Jili You</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I am a second-year mechanical engineering student at University of Toronto. I have a strong passion for Machine learning and automotive design.
+             I enjoy I enjoy applying techinical knowledge and problem solving skills to solve real-life problems. Through my projects both in and outside class,
+             I am proficient in Python, Pytorch, Solidworks. I am looking forward to implementing my skills and passion to contribute to pioneering projects and 
+             innovation in engineering design. </p>
+    </section>
+    <!-- project section -->
+    <section id="projects">
+        <h1>Projects</h1>
+        <div class="slideshow-container">
+            <!-- Project 1 -->
+            <div class="slide">
+                <img src="images/project1.png" alt="project1">
+                <div class="description">
+                    <h2>Image Recognition Using CNNs</h2>
+                    <p>This project showcases a concolutional neural network built using Pytorch. The model is trained on Fashion-MNIST, a pre-built 
+                        dataset consisting of 70,000 images of different clothing categories such as shoes, dress and pants. Three different archtectures were implemented 
+                        and image recognition accuracy is compared horizontally.Among all the neural network architecture implemented, the TinyVGG achieved the 
+                        highest accuracy.  
+                    </p>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="slide">
+                <img src="images/project2.jpg" alt="Project2">
+                <div class="description">
+                    <h3>Objection Detection Using Faster R-CNN</h3>
+                    <p>I developed a computer vision model for hot dog detection in images using Pytorch implementing the Faster R-CNN archetecture.
+                        The model was trained on a custom datasets in COCO format which recorded the positions of the hotdogs. The model demonstrated robust performance 
+                        across various precision measuring metrics, highlighting its ability to detect hotdogs in different scenarios and its potential for further implication.</p>
+                </div>
+            </div>    
+            <!-- Navigation Buttons -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Skill 1</li>
+            <li>Skill 2</li>
+            <li>Skill 3</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href=> jili.you@mail.utoronto.ca</a></p>
+        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">Your GitHub</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 [Jili You]. All rights reserved.</p>
+    </footer>
+</body>
+</html>
