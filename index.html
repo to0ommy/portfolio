@@ -36,7 +36,7 @@
     <section id="about">
         <h2>About Me</h2>
         <p>Hello! I am a second-year mechanical engineering student at University of Toronto. I have a strong passion for Machine learning and automotive design.
-             I enjoy I enjoy applying techinical knowledge and problem solving skills to solve real-life problems. Through my projects both in and outside class,
+             I enjoy applying technical knowledge and problem solving skills to solve real-life problems. Through my projects both in and outside class,
              I am proficient in Python, Pytorch, Solidworks. I am looking forward to applying my skills and passion to contribute to pioneering projects and 
              innovation in engineering design. </p>
     </section>
@@ -51,7 +51,7 @@
                     <h2>Image Recognition Using CNNs</h2>
                     <p>This project showcases a concolutional neural network built using Pytorch. The model is trained on Fashion-MNIST, a pre-built 
                         dataset consisting of 70,000 images of different clothing categories such as shoes, dress and pants. Three different archtectures were implemented 
-                        and image recognition accuracy is compared horizontally.Among all the neural network architecture implemented, the TinyVGG achieved the 
+                        and image recognition accuracy is compared horizontally.Among all the neural network archtectures implemented, the TinyVGG achieved the 
                         highest accuracy.  
                     </p>
                 </div>
@@ -60,7 +60,7 @@
             <div class="slide">
                 <img src="images/project2.jpg" alt="Project2">
                 <div class="description">
-                    <h2>Objection Detection Using Faster R-CNN</h2>
+                    <h2>Object Detection Using Faster R-CNN</h2>
                     <p>I developed a computer vision model for hot dog detection in images using Pytorch implementing the Faster R-CNN archetecture.
                         The model was trained on a custom datasets in COCO format which recorded the positions of the hotdogs. The model demonstrated robust performance 
                         across various precision measuring metrics, highlighting its ability to detect hotdogs in different scenarios and its potential for further implication.</p>
@@ -79,9 +79,27 @@
                 <img src="images/project4.jpeg" alt="Project4">
                 <div class="description">
                     <h2>Basic Machining Course</h2>
-                    <p>To grasp a better understanding of machining techinques, I participated in a course at George Brown College. In this course, I learned how to use
+                    <p>To grasp a better understanding of machining techniques, I participated in a course at George Brown College. In this course, I learned how to use
                         a mill, a drill press, and a lathe. Using the knowledge we learned, I machined a single piston with a functional slider crank. The piston is capable of 
                         operating by feeding compressed air into the block.
+                    </p>
+                </div>
+            </div>
+            <!-- Project 5 -->
+            <div class="slide">
+                <img src="images/project5.jpg" alt="Project5">
+                <div class="description">
+                    <h2>3D Printed Gearbox</h2>
+                    <p>In the MIE 243 dissection, I collaborated with 2 other classmates to design and 3D print a right-angle gearbox with a reduction speed of 3:1. An offset is introduced 
+                        between the input and output shaft by using a Hypoid gear. </p>
+                </div>
+            </div>
+            <!-- Project 6 -->
+            <div class="slide">
+                <img src="images/project6.png" alt="Project6">
+                <div class="description">
+                    <h2>Portfolio Website</h2>
+                    <p>I built a website from scratch by writing custom HTML, CSS, and JavaScript code. The website is then launched through github for public access.
                     </p>
                 </div>
             </div>  
@@ -98,6 +116,8 @@
             <img src="images/icons/python.png" alt="Python" title="Python">
             <img src="images/icons/Pytorch.webp" alt="PyTorch" title="PyTorch" class="icon-large">
             <img src="images/icons/solidworks1.png" alt="SolidWorks" title="SolidWorks">
+            <img src="images/icons/Matlab.png" alt="Matlab" title="Matlab">
+            <img src="images/icons/office.webp" alt="Office" title="Office">
             <!-- Add other logos -->
         </div>
     </section>
@@ -106,13 +126,22 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: <a href=> jili.you@mail.utoronto.ca</a></p>
-        <p>GitHub: <a href="https://github.com/to0ommy" target="_blank">GitHub</a></p>
+        <div class="contact-icons">
+            <span class="email-container">
+                <img src="images/icons/email.png" alt="Email Icon" title="Click to show email" class="icon" onclick="showEmail()">
+                <span id="email-text" style="display: none;">jili.you@mail.utoronto.ca</span>
+            </span>
+            <a href="https://github.com/to0ommy" target="_blank">
+                <img src="images/icons/github.png" alt="GitHub Icon" title="GitHub" class="icon github-icon">
+            </a>
+        </div>
     </section>
-
+    
+    
     <!-- Footer -->
     <footer>
         <p>© 2024 [Jili You]. All rights reserved.</p>
     </footer>
 </body>
 </html>
+

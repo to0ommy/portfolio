@@ -46,4 +46,17 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.next').addEventListener('click', () => changeSlide(1));
 });
 
+function showEmail() {
+    const emailText = document.getElementById("email-text");
+    emailText.style.display = "inline"; // Make the email visible
+}
+
+function showEmail() {
+    const emailText = document.getElementById("email-text");
+    if (emailText.style.display === "none" || emailText.style.display === "") {
+        emailText.style.display = "inline"; // Show email
+    } else {
+        emailText.style.display = "none"; // Hide email
+    }
+}
 

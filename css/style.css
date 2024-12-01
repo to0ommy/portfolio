@@ -75,8 +75,8 @@ section {
 }
 
 #projects .project img {
-    width: 50%; /* Set the image width to 40% of the container */
-    max-width: 200px; /* Optional: limit the max width */
+    width: 40%; /* Set the image width to 40% of the container */
+    max-width: 150px; /* Optional: limit the max width */
     border-radius: 10px;
     margin-right: 20px; /* Add space between image and description */
 }
@@ -127,8 +127,21 @@ section {
     display: block;
 }
 
+.slide img[alt="Project5"] {
+    max-width: 50%;
+    max-height: 75%;
+    height: auto;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.slide img[alt="Project6"] {
+    border: 2px solid #5d5c5c; /* Adjust thickness and color */
+    border-radius: 10px; /* Optional: match existing styling */
+}
+
 .slide img {
-    max-width: 90%;
+    max-width: 80%;
     height: auto;
     width: auto;
     margin: auto;
@@ -214,6 +227,32 @@ ul li {
     background: #ddd;
     border-radius: 5px;
 }
+
+.contact-icons {
+    display: flex; /* Arrange icons horizontally */
+    align-items: center; /* Vertically align icons */
+    justify-content: center; /* Center the icons in the container */
+    gap: 15px; /* Add space between icons */
+}
+
+.icon {
+    width: 65px; /* Set consistent size for all icons */
+    height: 65px; /* Maintain aspect ratio */
+    object-fit: contain;
+    cursor: pointer; /* Indicate it's clickable */
+}
+.github-icon {
+    width: 105px; /* Increase width for GitHub */
+    height: 105px; /* Increase height for GitHub */
+}
+
+#email-text {
+    font-size: 1em;
+    color: #333;
+    margin-left: 10px; /* Add space between the icon and revealed email */
+}
+
+
 
 footer {
     background: #333;
