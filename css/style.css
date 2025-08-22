@@ -107,7 +107,7 @@ section {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
-    height: 750px;
+    height: 800px;
     padding : 20px;
 }
 
@@ -160,7 +160,14 @@ section {
 
 
 .description {
-    margin-top: 16px;
+    margin-top: 15px;
+    padding: 15px 25px;  /* add spacing inside the box */
+    text-align: left;    /* optional: makes long text easier to read */
+}
+
+.slideshow-container .description h2 {
+    text-align: center; /* override just the title */
+    margin-bottom: 10px; /* add spacing below */
 }
 /* Navigation Buttons */
 .prev, .next {
@@ -278,7 +285,7 @@ footer {
 }
 
 #projects .slideshow-container .slide:nth-of-type(2) img {
-  width: 95% !important;          /* actually grow this one image */
+  width: 80% !important;          /* actually grow this one image */
   max-width: none !important;     /* lift the 600px cap just for this image */
   height: auto !important;
   display: block;
