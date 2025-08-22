@@ -60,7 +60,7 @@ section {
 
 #projects img {
     width: 100%;
-    max-width: 600px;
+    max-width: 650px;
     border-radius: 5px;
     margin-top: 10px;
 }
@@ -96,6 +96,7 @@ section {
     line-height: 1.6;
     color: #555;
 }
+
 /* Projects Slideshow */
 .slideshow-container {
     position: relative;
@@ -106,7 +107,7 @@ section {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
-    height: 700px;
+    height: 750px;
     padding : 20px;
 }
 
@@ -127,7 +128,7 @@ section {
     display: block;
 }
 
-.slide img[alt="Project5"] {
+.slide img[alt="Project7"] {
     max-width: 50%;
     max-height: 75%;
     height: auto;
@@ -135,7 +136,16 @@ section {
     border-radius: 10px;
 }
 
-.slide img[alt="Project6"] {
+.slide img[alt="Project3"] {
+    border: 2px solid #5d5c5c; /* Adjust thickness and color */
+    border-radius: 10px; /* Optional: match existing styling */
+}
+
+.slide img[alt="Project7"] {
+    border: 2px solid #5d5c5c; /* Adjust thickness and color */
+    border-radius: 10px; /* Optional: match existing styling */
+}
+.slide img[alt="Project2"] {
     border: 2px solid #5d5c5c; /* Adjust thickness and color */
     border-radius: 10px; /* Optional: match existing styling */
 }
@@ -147,6 +157,7 @@ section {
     margin: auto;
     border-radius: 10px;
 }
+
 
 .description {
     margin-top: 16px;
@@ -260,3 +271,17 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+
+/* Only affect slide #2 (GNN) */
+#projects .slideshow-container .slide:nth-of-type(2) {
+  flex-direction: column;         /* image on top, text below */
+}
+
+#projects .slideshow-container .slide:nth-of-type(2) img {
+  width: 95% !important;          /* actually grow this one image */
+  max-width: none !important;     /* lift the 600px cap just for this image */
+  height: auto !important;
+  display: block;
+  margin: 0 auto 12px;            /* centered, with a little spacing */
+}
+
