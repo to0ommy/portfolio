@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.next').addEventListener('click', () => changeSlide(1));
 });
 
+
 function showEmail() {
     const emailText = document.getElementById("email-text");
     emailText.style.display = "inline"; // Make the email visible
