@@ -1,0 +1,4 @@
+.local-backup/
+.preview/
+node_modules/
+*.log

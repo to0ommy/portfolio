@@ -1,182 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The personal portfolio of Jili You. Explore projects in mechanical engineering, machine learning, and biomedical research.">
+  <meta name="theme-color" content="#f6f5f0">
+  <meta property="og:title" content="Jili You — Engineering, Research &amp; Code">
+  <meta property="og:description" content="The personal portfolio of Jili You. Explore projects in mechanical engineering, machine learning, and biomedical research.">
+  <meta property="og:type" content="website">
+  <title>Jili You — Engineering, Research &amp; Code</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
-<body>
-    <!-- Your content -->
-    <script src="js/script.js"></script>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner wrap">
+    <a class="brand" href="#top" aria-label="Jili You home"><span class="monogram" aria-hidden="true">JY</span><span>Jili You<span aria-hidden="true">.</span></span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="site-navigation">Menu <span aria-hidden="true">☰</span></button>
+    <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
+      <a href="#projects">Work</a><a href="#about">About</a><a class="nav-contact" href="#contact">Contacts <span class="arrow" aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <div class="hero-grid">
+      <div class="hero-intro">
+        <p class="eyebrow hero-eyebrow">Engineering · Research · Code</p>
+        <h1 id="hero-title">Jili You<span aria-hidden="true">.</span></h1>
+        <p class="hero-tagline">Curious by nature.<br><em>Hands-on by design.</em></p>
+        <p class="hero-description">Mechanical Engineering student at the University of Toronto, exploring the intersection of intelligent systems, thoughtful design, and biomedical research.</p>
+        <div class="hero-actions"><a class="button" href="#projects">Explore my work <span class="arrow" aria-hidden="true">↓</span></a><a class="button button-secondary" href="mailto:jili.you@mail.utoronto.ca">Email me <span class="arrow" aria-hidden="true">↗</span></a></div>
+        <a class="hero-email" href="mailto:jili.you@mail.utoronto.ca">jili.you@mail.utoronto.ca</a>
+      </div>
+      <figure class="portrait">
+        <div class="portrait-frame"><img src="images/jili-you.jpg" alt="Portrait of Jili You" width="1280" height="1920" fetchpriority="high"></div>
+      </figure>
+    </div>
+    <div class="hero-bottom"><div class="disciplines"><span>Mechanical design</span><span>Machine learning</span><span>Biomedical research</span></div><a class="scroll-link" href="#projects"><span>Scroll to explore</span><span class="arrow" aria-hidden="true">↓</span></a></div>
+  </section>
+
+  <section class="work-section" id="projects" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="section-topline"><p class="eyebrow">01 / A selection of projects</p><span class="project-count" role="status" aria-live="polite">07 projects</span></div>
+      <div class="section-heading"><h2 id="work-title">Ideas put into practice.</h2><p>From the workshop to the lab,<br>and the code in between.</p></div>
+      <div class="project-filters" role="group" aria-label="Filter projects" hidden><button class="filter" type="button" data-filter="all" aria-pressed="true" aria-controls="project-grid">All work<span class="filter-count">07</span></button><button class="filter" type="button" data-filter="engineering" aria-pressed="false" aria-controls="project-grid">Engineering</button><button class="filter" type="button" data-filter="machine-learning" aria-pressed="false" aria-controls="project-grid">Machine learning</button><button class="filter" type="button" data-filter="research" aria-pressed="false" aria-controls="project-grid">Research</button><button class="filter" type="button" data-filter="web" aria-pressed="false" aria-controls="project-grid">Web</button></div>
+      <div class="project-grid" id="project-grid"><article class="project-card" data-category="research" data-slug="tumour-on-a-chip" data-reveal>
+  <a class="project-link" href="projects/tumour-on-a-chip.html" aria-labelledby="action-tumour-on-a-chip title-tumour-on-a-chip">
+    <div class="project-image"><img src="images/project1.jpeg" alt="Tumour-on-a-chip research project" loading="lazy" decoding="async"><span class="project-card-label">In the lab</span></div>
+    <div class="project-info"><div class="project-meta"><span class="project-number">01</span><span class="project-meta-separator" aria-hidden="true"></span><span>Biomedical research</span></div>
+      <div class="project-title-row"><h3 id="title-tumour-on-a-chip">Tumour-on-a-Chip Model</h3></div>
+      <p class="project-summary">Fabricating microfluidic devices and studying cells to model the tumour microenvironment in vitro.</p><ul class="tags" aria-label="Topics and tools"><li>Microfluidics</li><li>Cell culture</li><li>Microscopy</li></ul>
+      <span class="project-cta"><span id="action-tumour-on-a-chip">View project</span><span class="arrow" aria-hidden="true">→</span></span>
+    </div>
+  </a>
+</article>
+<article class="project-card" data-category="machine-learning" data-slug="gnn-production-planning" data-reveal>
+  <a class="project-link" href="projects/gnn-production-planning.html" aria-labelledby="action-gnn-production-planning title-gnn-production-planning">
+    <div class="project-image"><img src="images/project2.jpeg" alt="Graph neural network production planning project" loading="lazy" decoding="async"></div>
+    <div class="project-info"><div class="project-meta"><span class="project-number">02</span><span class="project-meta-separator" aria-hidden="true"></span><span>Machine learning</span></div>
+      <div class="project-title-row"><h3 id="title-gnn-production-planning">Graph Neural Networks for Production Planning</h3></div>
+      <p class="project-summary">Exploring graph neural networks for vulcanizing planning decisions in rubber manufacturing.</p><ul class="tags" aria-label="Topics and tools"><li>Graph neural networks</li><li>Scheduling</li><li>Manufacturing</li></ul>
+      <span class="project-cta"><span id="action-gnn-production-planning">View project</span><span class="arrow" aria-hidden="true">→</span></span>
+    </div>
+  </a>
+</article>
+<article class="project-card" data-category="machine-learning" data-slug="fashion-mnist-cnn" data-reveal>
+  <a class="project-link" href="projects/fashion-mnist-cnn.html" aria-labelledby="action-fashion-mnist-cnn title-fashion-mnist-cnn">
+    <div class="project-image"><img src="images/project3.png" alt="Fashion-MNIST image classification project" loading="lazy" decoding="async"></div>
+    <div class="project-info"><div class="project-meta"><span class="project-number">03</span><span class="project-meta-separator" aria-hidden="true"></span><span>Machine learning</span></div>
+      <div class="project-title-row"><h3 id="title-fashion-mnist-cnn">Fashion Image Classification</h3></div>
+      <p class="project-summary">Comparing three neural network architectures for clothing image classification with PyTorch.</p><ul class="tags" aria-label="Topics and tools"><li>PyTorch</li><li>CNNs</li><li>Fashion-MNIST</li></ul>
+      <span class="project-cta"><span id="action-fashion-mnist-cnn">View project</span><span class="arrow" aria-hidden="true">→</span></span>
+    </div>
+  </a>
+</article>
+<article class="project-card" data-category="machine-learning" data-slug="hot-dog-detection" data-reveal>
+  <a class="project-link" href="projects/hot-dog-detection.html" aria-labelledby="action-hot-dog-detection title-hot-dog-detection">
+    <div class="project-image"><img src="images/project4.jpg" alt="Faster R-CNN hot dog detection project" loading="lazy" decoding="async"></div>
+    <div class="project-info"><div class="project-meta"><span class="project-number">04</span><span class="project-meta-separator" aria-hidden="true"></span><span>Machine learning</span></div>
+      <div class="project-title-row"><h3 id="title-hot-dog-detection">Hot Dog Detection with Faster R-CNN</h3></div>
+      <p class="project-summary">Training a Faster R-CNN model to locate hot dogs in images using a custom annotated dataset.</p><ul class="tags" aria-label="Topics and tools"><li>PyTorch</li><li>Faster R-CNN</li><li>Object detection</li></ul>
+      <span class="project-cta"><span id="action-hot-dog-detection">View project</span><span class="arrow" aria-hidden="true">→</span></span>
+    </div>
+  </a>
+</article>
+<article class="project-card" data-category="engineering" data-slug="machining" data-reveal>
+  <a class="project-link" href="projects/machining.html" aria-labelledby="action-machining title-machining">
+    <div class="project-image"><img src="images/project5.jpeg" alt="Machined piston and slider-crank course project" loading="lazy" decoding="async"></div>
+    <div class="project-info"><div class="project-meta"><span class="project-number">05</span><span class="project-meta-separator" aria-hidden="true"></span><span>Mechanical engineering</span></div>
+      <div class="project-title-row"><h3 id="title-machining">Machined Piston &amp; Slider Crank</h3></div>
+      <p class="project-summary">Turning machining practice into a working piston and slider-crank mechanism powered by compressed air.</p><ul class="tags" aria-label="Topics and tools"><li>Machining</li><li>Fabrication</li><li>Mechanisms</li></ul>
+      <span class="project-cta"><span id="action-machining">View project</span><span class="arrow" aria-hidden="true">→</span></span>
+    </div>
+  </a>
+</article>
+<article class="project-card" data-category="engineering" data-slug="steering-wheel" data-reveal>
+  <a class="project-link" href="projects/steering-wheel.html" aria-labelledby="action-steering-wheel title-steering-wheel">
+    <div class="project-image"><img src="images/project6.png" alt="SolidWorks steering wheel CAD project" loading="lazy" decoding="async"></div>
+    <div class="project-info"><div class="project-meta"><span class="project-number">06</span><span class="project-meta-separator" aria-hidden="true"></span><span>Mechanical engineering</span></div>
+      <div class="project-title-row"><h3 id="title-steering-wheel">Urban Concept Steering Wheel</h3></div>
+      <p class="project-summary">Creating the steering wheel CAD model for the team&#39;s 2023 Urban Concept car.</p><ul class="tags" aria-label="Topics and tools"><li>SolidWorks</li><li>CAD</li><li>Automotive</li></ul>
+      <span class="project-cta"><span id="action-steering-wheel">View project</span><span class="arrow" aria-hidden="true">→</span></span>
+    </div>
+  </a>
+</article>
+<article class="project-card" data-category="web" data-slug="portfolio" data-reveal>
+  <a class="project-link" href="projects/portfolio.html" aria-labelledby="action-portfolio title-portfolio">
+    <div class="project-image"><img src="images/project7.png" alt="Earlier version of Jili You&#39;s portfolio website" loading="lazy" decoding="async"></div>
+    <div class="project-info"><div class="project-meta"><span class="project-number">07</span><span class="project-meta-separator" aria-hidden="true"></span><span>Web development</span></div>
+      <div class="project-title-row"><h3 id="title-portfolio">Personal Portfolio Website</h3></div>
+      <p class="project-summary">A personal website built with HTML, CSS, and JavaScript to share my projects and interests.</p><ul class="tags" aria-label="Topics and tools"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+      <span class="project-cta"><span id="action-portfolio">View project</span><span class="arrow" aria-hidden="true">→</span></span>
+    </div>
+  </a>
+</article></div>
+    </div>
+  </section>
+
+  <section class="about-section" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <div class="about-grid">
+        <div><p class="eyebrow">02 / A little about me</p><h2 class="about-title" id="about-title">Learning by<br><em>making things.</em></h2></div>
+        <div class="about-text">
+          <p>Hello! I am a third-year Mechanical Engineering student at the University of Toronto. I have a strong passion for machine learning, automotive design, and the integration of biomedical and mechanical fields.</p>
+          <p>I enjoy applying technical knowledge and problem-solving skills to tackle real-world challenges. Through my projects both in and outside class, I have gained proficiency in Python, PyTorch, and SolidWorks.</p>
+          <p>I look forward to applying my skills and passion to contribute to pioneering projects and innovations in mechanical engineering design and biomedical applications.</p>
+        </div>
+      </div>
+      <div class="toolbox"><p class="eyebrow toolbox-label">Some tools I work with</p><ul class="tool-list"><li>Python</li><li>PyTorch</li><li>SolidWorks</li><li>Fusion 360</li><li>MATLAB</li><li>MetaMorph</li><li>Microsoft Office</li></ul></div>
+    </div>
+  </section>
+
+  <section class="contact-section wrap" id="contact" aria-labelledby="contact-title">
+    <div class="contact-grid">
+      <div><p class="eyebrow">03 / Get in touch</p><h2 id="contact-title">Let’s start<br><em>a conversation.</em></h2><p class="contact-note">Have a question about my work? I’d love to hear from you.</p></div>
+      <div><a class="contact-email" href="mailto:jili.you@mail.utoronto.ca">jili.you@mail.utoronto.ca <span class="arrow" aria-hidden="true">↗</span></a><div class="contact-links"><a href="https://github.com/to0ommy" target="_blank" rel="noopener noreferrer">GitHub <span class="arrow" aria-hidden="true">↗</span></a><button class="copy-button" type="button" data-copy-email hidden>Copy email <span aria-hidden="true">⧉</span></button></div><span class="copy-status" role="status" aria-live="polite"></span></div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><div class="footer-inner wrap"><span>© <span data-year>2026</span> Jili You</span><span class="footer-credit">Made with curiosity &amp; code.</span><a href="#top">Back to top <span class="arrow" aria-hidden="true">↑</span></a></div></footer>
+<noscript><style>.menu-toggle{display:none}.site-nav{display:flex;position:static;padding:0;border:0;box-shadow:none;flex-direction:row;gap:12px}.header-inner{flex-wrap:wrap;padding-block:12px}.site-nav .nav-contact{border:0;padding:12px 0}</style></noscript>
 </body>
 </html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <h1>Jili You</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I am a third-year Mechanical Engineering student at the University of Toronto. I have a strong passion for machine learning, automotive design, 
-            and the integration of biomedical and mechanical fields. I enjoy applying technical knowledge and problem-solving skills to tackle real-world challenges. 
-            Through my projects both in and outside class, I have gained proficiency in Python, PyTorch, and SolidWorks. I look forward to applying my skills and passion
-             to contribute to pioneering projects and innovations in mechanical engineering design and biomedical applications.
-            </p>
-
-    </section>
-    <!-- project section -->
-    <section id="projects">
-        <h1>Projects</h1>
-        <div class="slideshow-container">
-            <!-- Project 1 -->
-            <div class="slide">
-                <img src="images/project1.jpeg" alt="project1">
-                <div class="description">
-                    <h2>Tumour-On-A-Chip Model</h2>
-                    <p>As a Research Assistant at the Integrative Biology and Microengineered Technologies (IBMT) – IBMT Laboratory, 
-            I worked under the mentorship of PhD student Han Shao and Professor Edmond Young to develop 
-            a tumour-on-a-chip platform that models the tumour microenvironment in vitro. My role included 
-            <b>microfluidic device fabrication</b> (channel design, PDMS casting, and bonding), 
-            <b>cell culture</b> (MDA-MB-231 breast cancer cells, GFP-A549 lung cancer cells, fibroblasts, 
-            and endothelial cells using sterile technique), and <b>imaging & data analysis</b> 
-            (microscopy of brightfield and fluorescent samples, with quantitative analysis of cell 
-            morphology and growth). This project provides a physiologically relevant platform to study 
-            tumour progression, cancer–stroma interactions, and therapeutic response, offering an 
-            improved alternative to conventional 2D cell culture while reducing reliance on animal models.
-                    </p>
-                </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="slide">
-                <img src="images/project2.jpeg" alt="Project2">
-                <div class="description">
-                    <h2>Graph Neural Networks for Vulcanizing Planning Decisions</h2>
-                    <p>  This project implemented Graph Neural Networks (GNNs) to address the Vulcanizing Planning Decision Problem in rubber manufacturing. 
-                        The model was designed to process large-scale datasets by capturing complex variable–constraint relationships inherent in the vulcanizing process. 
-                        Work focused on developing and tuning the GNN architecture to balance scalability with predictive accuracy, while explicitly incorporating demand 
-                        and resource constraints. By leveraging message passing across machine–job graphs, the network was able to represent scheduling dependencies more 
-                        effectively than conventional optimization approaches. Experimental results demonstrated improved scheduling efficiency and robustness on large problem instances,
-                         highlighting the potential of GNN-based methods for real-world industrial manufacturing and production planning.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="slide">
-                <img src="images/project3.png" alt="Project3">
-                <div class="description">
-                    <h2>Image Recognition Using CNNs</h2>
-                    <p>This project showcases a convolutional neural network built using Pytorch. The model is trained on Fashion-MNIST, a pre-built 
-                        dataset consisting of 70,000 images of different clothing categories such as shoes, dress and pants. Three different architectures were implemented 
-                        and image recognition accuracy was compared across the models. Among all the neural network archtectures implemented, the TinyVGG achieved the 
-                        highest accuracy.  
-                    </p>
-                </div>
-            </div>
-            <!-- Project 4 -->
-            <div class="slide">
-                <img src="images/project4.jpg" alt="Project4">
-                <div class="description">
-                    <h2>Object Detection Using Faster R-CNN</h2>
-                    <p>I developed a computer vision model for hot dog detection in images using Pytorch implementing the Faster R-CNN architecture.
-                        The model was trained on a custom dataset in COCO format that recorded the positions of the hotdogs. The model demonstrated robust performance 
-                        across various precision measuring metrics, highlighting its ability to detect hot dogs in different scenarios and its potential for further implication.</p>
-                </div>
-            </div>
-            <!-- Project 5 -->
-            <div class="slide">
-                <img src="images/project5.jpeg" alt="Project5">
-                <div class="description">
-                    <h2>Basic Machining Course</h2>
-                    <p>To grasp a better understanding of machining techniques, I participated in a course at George Brown College. In this course, I learned how to use
-                        a mill, a drill press, and a lathe. Using the knowledge we learned, I machined a single piston with a functional slider crank. The piston is capable of 
-                        operating by feeding compressed air into the block.
-                    </p>
-            
-                </div>
-            </div>
-            <!-- Project 6 -->
-            <div class="slide">
-                <img src="images/project6.png" alt="Project6">
-                <div class="description">
-                    <h2>Steering Wheel CAD</h2>
-                    <p>As a member of University of Toronto Super Milage design team, I cadded the steering wheel for the 2023 Urban Concept car using Solidworks.
-
-                    </p>    
-            
-                </div>
-            </div>
-            <!-- Project 7 -->
-            <div class="slide">
-                <img src="images/project7.png" alt="Project7">
-                <div class="description">
-                    <h2>Portfolio Website</h2>
-                    <p>I built a website from scratch by writing custom HTML, CSS, and JavaScript code. The website is then launched through GitHub for public access. The website serves as a platform 
-                        for my work, offering visitors an interactive and engaging experience to explore my engineering projects, technical skills, and professional interests.
-                    </p>
-                </div>
-            </div>
-            <!-- Navigation Buttons -->
-            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-            <a class="next" onclick="changeSlide(1)">&#10095;</a>
-        </div>
-    </section>
-
-    
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <img src="images/icons/python.png" alt="Python" title="Python">
-            <img src="images/icons/Pytorch.webp" alt="PyTorch" title="PyTorch" class="icon-large">
-            <img src="images/icons/solidworks1.png" alt="SolidWorks" title="SolidWorks">
-            <img src="images\icons\Autodesk_Fusion_360.webp" alt="Autodesk_Fusion_360" title="Autodesk_Fusion_360">
-            <img src="images/icons/metamorph.png" alt="metamorph" title="metamorph">
-            <img src="images/icons/Matlab.png" alt="Matlab" title="Matlab">
-            <img src="images/icons/office.webp" alt="Office" title="Office">
-            <!-- Add other logos -->
-        </div>
-    </section>
-    
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="contact-icons">
-            <span class="email-container">
-                <img src="images/icons/email.png" alt="Email Icon" title="Click to show email" class="icon" onclick="showEmail()">
-                <span id="email-text" style="display: none;">jili.you@mail.utoronto.ca</span>
-            </span>
-            <a href="https://github.com/to0ommy" target="_blank">
-                <img src="images/icons/github.png" alt="GitHub Icon" title="GitHub" class="icon github-icon">
-            </a>
-        </div>
-    </section>
-    
-    
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 [Jili You]. All rights reserved.</p>
-    </footer>
-</body>
-</html>
-
-
