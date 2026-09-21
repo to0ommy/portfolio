@@ -1,8 +1,10 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
+const styleVersion = createHash('sha256').update(await readFile(path.join(root, 'css/style.css'))).digest('hex').slice(0, 12);
 const projects = JSON.parse(await readFile(path.join(root, 'data/projects.json'), 'utf8'));
 const escape = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
 const arrow = (direction = '↗') => `<span class="arrow" aria-hidden="true">${direction}</span>`;
@@ -22,7 +24,7 @@ function head(title, description, prefix = '') {
   <meta property="og:type" content="website">
   <title>${escape(title)}</title>
   <link rel="icon" type="image/svg+xml" href="${prefix}images/favicon.svg">
-  <link rel="stylesheet" href="${prefix}css/style.css">
+  <link rel="stylesheet" href="${prefix}css/style.css?v=${styleVersion}">
   <script src="${prefix}js/script.js" defer></script>
 </head>`;
 }
@@ -65,21 +67,21 @@ const index = `${head('Jili You — Engineering, Research & Code', 'The personal
 <body id="top">
 ${header()}
 <main id="main">
-  <section class="hero wrap" aria-labelledby="hero-title">
+  <section class="hero wrap" id="about" aria-labelledby="hero-title">
     <div class="hero-grid">
       <div class="hero-intro">
-        <p class="eyebrow hero-eyebrow">Engineering · Research · Code</p>
         <h1 id="hero-title">Jili You<span aria-hidden="true">.</span></h1>
-        <p class="hero-tagline">Curious by nature.<br><em>Hands-on by design.</em></p>
-        <p class="hero-description">Mechanical Engineering student at the University of Toronto, exploring the intersection of intelligent systems, thoughtful design, and biomedical research.</p>
-        <div class="hero-actions"><a class="button" href="#projects">Explore my work ${arrow('↓')}</a><a class="button button-secondary" href="mailto:jili.you@mail.utoronto.ca">Email me ${arrow()}</a></div>
-        <a class="hero-email" href="mailto:jili.you@mail.utoronto.ca">jili.you@mail.utoronto.ca</a>
+        <div class="hero-bio">
+          <p>Hello! I am a third-year Mechanical Engineering student at the University of Toronto. I have a strong passion for machine learning, automotive design, and the integration of biomedical and mechanical fields.</p>
+          <p>I enjoy applying technical knowledge and problem-solving skills to tackle real-world challenges. Through my projects both in and outside class, I have gained proficiency in Python, PyTorch, and SolidWorks.</p>
+          <p>I look forward to applying my skills and passion to contribute to pioneering projects and innovations in mechanical engineering design and biomedical applications.</p>
+        </div>
       </div>
       <figure class="portrait">
         <div class="portrait-frame"><img src="images/jili-you.jpg" alt="Portrait of Jili You" width="1280" height="1920" fetchpriority="high"></div>
       </figure>
     </div>
-    <div class="hero-bottom"><div class="disciplines"><span>Mechanical design</span><span>Machine learning</span><span>Biomedical research</span></div><a class="scroll-link" href="#projects"><span>Scroll to explore</span>${arrow('↓')}</a></div>
+    <div class="toolbox"><p class="eyebrow toolbox-label">Some tools I work with</p><ul class="tool-list"><li>Python</li><li>PyTorch</li><li>SolidWorks</li><li>Fusion 360</li><li>MATLAB</li><li>MetaMorph</li><li>Microsoft Office</li></ul></div>
   </section>
 
   <section class="work-section" id="projects" aria-labelledby="work-title">
@@ -91,23 +93,9 @@ ${header()}
     </div>
   </section>
 
-  <section class="about-section" id="about" aria-labelledby="about-title">
-    <div class="wrap">
-      <div class="about-grid">
-        <div><p class="eyebrow">02 / A little about me</p><h2 class="about-title" id="about-title">Learning by<br><em>making things.</em></h2></div>
-        <div class="about-text">
-          <p>Hello! I am a third-year Mechanical Engineering student at the University of Toronto. I have a strong passion for machine learning, automotive design, and the integration of biomedical and mechanical fields.</p>
-          <p>I enjoy applying technical knowledge and problem-solving skills to tackle real-world challenges. Through my projects both in and outside class, I have gained proficiency in Python, PyTorch, and SolidWorks.</p>
-          <p>I look forward to applying my skills and passion to contribute to pioneering projects and innovations in mechanical engineering design and biomedical applications.</p>
-        </div>
-      </div>
-      <div class="toolbox"><p class="eyebrow toolbox-label">Some tools I work with</p><ul class="tool-list"><li>Python</li><li>PyTorch</li><li>SolidWorks</li><li>Fusion 360</li><li>MATLAB</li><li>MetaMorph</li><li>Microsoft Office</li></ul></div>
-    </div>
-  </section>
-
   <section class="contact-section wrap" id="contact" aria-labelledby="contact-title">
     <div class="contact-grid">
-      <div><p class="eyebrow">03 / Get in touch</p><h2 id="contact-title">Let’s start<br><em>a conversation.</em></h2><p class="contact-note">Have a question about my work? I’d love to hear from you.</p></div>
+      <div><p class="eyebrow">02 / Get in touch</p><h2 id="contact-title">Let’s start<br><em>a conversation.</em></h2><p class="contact-note">Have a question about my work? I’d love to hear from you.</p></div>
       <div><a class="contact-email" href="mailto:jili.you@mail.utoronto.ca">jili.you@mail.utoronto.ca ${arrow()}</a><div class="contact-links"><a href="https://github.com/to0ommy" target="_blank" rel="noopener noreferrer">GitHub ${arrow()}</a><button class="copy-button" type="button" data-copy-email hidden>Copy email <span aria-hidden="true">⧉</span></button></div><span class="copy-status" role="status" aria-live="polite"></span></div>
     </div>
   </section>
