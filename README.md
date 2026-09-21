@@ -30,13 +30,13 @@ Node.js is only used for this optional authoring step. Commit the regenerated `i
 
 ## GitHub Pages
 
-Continue using the existing GitHub repository and its current Pages publishing branch/folder. Copy the updated site files to that publishing location, preserving `css/`, `js/`, `images/`, and `projects/`. All site links are relative, so both repository sites and custom domains are supported.
+The live site is https://to0ommy.github.io/portfolio/, published from the `main` branch of `to0ommy/portfolio`. Publish `index.html`, `.nojekyll`, and the complete `css/`, `js/`, `images/`, and `projects/` folders together in one commit. Include `data/` and `tools/` to keep the authoring source in sync. Uploading only the root files leaves the new HTML paired with old styles and scripts and omits the new project pages. All site links are relative, so both repository sites and custom domains are supported.
 
 If configuring Pages for the first time, open the repository's **Settings → Pages**, choose **Deploy from a branch**, and select the branch and folder containing `index.html`. The `.nojekyll` file keeps this a plain static site.
 
 Official instructions: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
 
-No deployment was performed as part of this local redesign. The original code is retained locally in `.local-backup/original-2026-09-21/`; that directory is ignored by Git and should not be uploaded.
+The original code is retained locally in `.local-backup/original-2026-09-21/`; that directory and `.preview/` are ignored by Git and should not be uploaded.
 
 ## Content
 

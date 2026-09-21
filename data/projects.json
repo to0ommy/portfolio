@@ -1,0 +1,162 @@
+[
+  {
+    "slug": "tumour-on-a-chip",
+    "index": "01",
+    "title": "Tumour-on-a-Chip Model",
+    "category": "research",
+    "categoryLabel": "Biomedical research",
+    "image": "images/project1.jpeg",
+    "imageAlt": "Tumour-on-a-chip research project",
+    "summary": "Fabricating microfluidic devices and studying cells to model the tumour microenvironment in vitro.",
+    "tags": ["Microfluidics", "Cell culture", "Microscopy"],
+    "overview": "As a Research Assistant at the Integrative Biology and Microengineered Technologies (IBMT) Laboratory, I contributed to a tumour-on-a-chip platform under the mentorship of PhD student Han Shao and Professor Edmond Young. The platform models the tumour microenvironment in vitro.",
+    "sections": [
+      {
+        "title": "Device fabrication & cell culture",
+        "paragraphs": [
+          "My work included microfluidic channel design, PDMS casting, and device bonding.",
+          "I used sterile techniques to culture MDA-MB-231 breast cancer cells, GFP-A549 lung cancer cells, fibroblasts, and endothelial cells."
+        ]
+      },
+      {
+        "title": "Imaging & analysis",
+        "paragraphs": [
+          "I worked with brightfield and fluorescence microscopy and performed quantitative analysis of cell morphology and growth. The project explores a platform for studying tumour progression, cancer–stroma interactions, and therapeutic response."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "gnn-production-planning",
+    "index": "02",
+    "title": "Graph Neural Networks for Production Planning",
+    "category": "machine-learning",
+    "categoryLabel": "Machine learning",
+    "image": "images/project2.jpeg",
+    "imageAlt": "Graph neural network production planning project",
+    "summary": "Exploring graph neural networks for vulcanizing planning decisions in rubber manufacturing.",
+    "tags": ["Graph neural networks", "Scheduling", "Manufacturing"],
+    "overview": "This project explored graph neural networks (GNNs) for the Vulcanizing Planning Decision Problem in rubber manufacturing, representing the relationships between jobs, machines, and production constraints.",
+    "sections": [
+      {
+        "title": "Graph representation",
+        "paragraphs": [
+          "The model used message passing across machine–job graphs to represent scheduling dependencies and variable–constraint relationships, incorporating demand and resource constraints."
+        ]
+      },
+      {
+        "title": "Model development",
+        "paragraphs": [
+          "Work focused on developing and tuning the GNN architecture and evaluating the balance between scalability and predictive accuracy on large problem instances."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "fashion-mnist-cnn",
+    "index": "03",
+    "title": "Fashion Image Classification",
+    "category": "machine-learning",
+    "categoryLabel": "Machine learning",
+    "image": "images/project3.png",
+    "imageAlt": "Fashion-MNIST image classification project",
+    "summary": "Comparing three neural network architectures for clothing image classification with PyTorch.",
+    "tags": ["PyTorch", "CNNs", "Fashion-MNIST"],
+    "overview": "I built an image classification project in PyTorch using Fashion-MNIST, a dataset of 70,000 clothing images spanning categories such as shoes, dresses, and pants.",
+    "sections": [
+      {
+        "title": "Architecture comparison",
+        "paragraphs": [
+          "I implemented three neural network architectures and compared their image recognition accuracy. TinyVGG achieved the highest accuracy among the models evaluated in this project."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "hot-dog-detection",
+    "index": "04",
+    "title": "Hot Dog Detection with Faster R-CNN",
+    "category": "machine-learning",
+    "categoryLabel": "Machine learning",
+    "image": "images/project4.jpg",
+    "imageAlt": "Faster R-CNN hot dog detection project",
+    "summary": "Training a Faster R-CNN model to locate hot dogs in images using a custom annotated dataset.",
+    "tags": ["PyTorch", "Faster R-CNN", "Object detection"],
+    "overview": "I developed a computer vision model in PyTorch using the Faster R-CNN architecture to detect hot dogs in images.",
+    "sections": [
+      {
+        "title": "Dataset & training",
+        "paragraphs": [
+          "The model was trained on a custom dataset in COCO format with annotations recording the positions of hot dogs. I evaluated its detection performance using precision metrics."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "machining",
+    "index": "05",
+    "title": "Machined Piston & Slider Crank",
+    "category": "engineering",
+    "categoryLabel": "Mechanical engineering",
+    "image": "images/project5.jpeg",
+    "imageAlt": "Machined piston and slider-crank course project",
+    "summary": "Turning machining practice into a working piston and slider-crank mechanism powered by compressed air.",
+    "tags": ["Machining", "Fabrication", "Mechanisms"],
+    "overview": "I took a basic machining course at George Brown College to develop practical experience with manufacturing tools and techniques.",
+    "sections": [
+      {
+        "title": "From tools to mechanism",
+        "paragraphs": [
+          "The course introduced the mill, drill press, and lathe. I applied these techniques to machine a single piston with a functional slider-crank mechanism.",
+          "The piston operates by feeding compressed air into the block."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "steering-wheel",
+    "index": "06",
+    "title": "Urban Concept Steering Wheel",
+    "category": "engineering",
+    "categoryLabel": "Mechanical engineering",
+    "image": "images/project6.png",
+    "imageAlt": "SolidWorks steering wheel CAD project",
+    "summary": "Creating the steering wheel CAD model for the team's 2023 Urban Concept car.",
+    "tags": ["SolidWorks", "CAD", "Automotive"],
+    "overview": "As a member of the University of Toronto Supermileage design team, I created the steering wheel CAD model for the 2023 Urban Concept car.",
+    "sections": [
+      {
+        "title": "CAD work",
+        "paragraphs": [
+          "I used SolidWorks to model the steering wheel as part of the team's vehicle design work."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "portfolio",
+    "index": "07",
+    "title": "Personal Portfolio Website",
+    "category": "web",
+    "categoryLabel": "Web development",
+    "image": "images/project7.png",
+    "imageAlt": "Earlier version of Jili You's portfolio website",
+    "summary": "A personal website built with HTML, CSS, and JavaScript to share my projects and interests.",
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "overview": "This portfolio uses custom HTML, CSS, and JavaScript to bring my engineering, research, and machine learning projects together in one place.",
+    "sections": [
+      {
+        "title": "Exploring the work",
+        "paragraphs": [
+          "The home page introduces me and presents a browsable collection of projects. Each project has a dedicated page with more context about the work."
+        ]
+      },
+      {
+        "title": "An evolving portfolio",
+        "paragraphs": [
+          "The image above shows an earlier version of the website. The current design builds on the same lightweight, static foundation, with GitHub remaining the intended publishing route."
+        ]
+      }
+    ]
+  }
+]

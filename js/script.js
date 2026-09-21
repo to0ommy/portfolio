@@ -1,63 +1,80 @@
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    if (window.scrollY > 50) {
-        header.classList.add('shrink');
-    } else {
-        header.classList.remove('shrink');
-    }
+// Progressive enhancements: the pages and project links work without JavaScript.
+const menuButton = document.querySelector('.menu-toggle');
+const navigation = document.querySelector('.site-nav');
+
+function closeMenu() {
+  menuButton?.setAttribute('aria-expanded', 'false');
+  navigation?.classList.remove('is-open');
+}
+menuButton?.addEventListener('click', () => {
+  const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+  menuButton.setAttribute('aria-expanded', String(!isOpen));
+  navigation?.classList.toggle('is-open', !isOpen);
+});
+navigation?.addEventListener('click', event => {
+  if (event.target.closest('a')) closeMenu();
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && menuButton?.getAttribute('aria-expanded') === 'true') {
+    closeMenu();
+    menuButton.focus();
+  }
+});
+document.addEventListener('click', event => {
+  if (!event.target.closest('.site-header')) closeMenu();
 });
 
-let currentSlide = 0; // Index of the current slide
-const slides = document.querySelectorAll('.slide');
-console.log(slides);
+const filterBar = document.querySelector('.project-filters');
+if (filterBar) {
+  filterBar.hidden = false;
+  const cards = [...document.querySelectorAll('.project-card')];
+  const count = document.querySelector('.project-count');
+  filterBar.addEventListener('click', event => {
+    const button = event.target.closest('button[data-filter]');
+    if (!button) return;
+    const category = button.dataset.filter;
+    filterBar.querySelectorAll('button').forEach(item => {
+      item.setAttribute('aria-pressed', String(item === button));
+    });
+    cards.forEach(card => {
+      card.hidden = category !== 'all' && card.dataset.category !== category;
+    });
+    const visibleCount = cards.filter(card => !card.hidden).length;
+    count.textContent = `${String(visibleCount).padStart(2, '0')} projects`;
+  });
+}
 
-
-document.addEventListener('DOMContentLoaded', () => {
-    let currentSlide = 0; // Index of the current slide
-    const slides = document.querySelectorAll('.slide'); // Select all slides
-
-    console.log(slides); // Debugging: Check if slides are found
-
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.style.display = i === index ? 'block' : 'none'; // Show the current slide
-        });
+const copyButton = document.querySelector('[data-copy-email]');
+if (copyButton && navigator.clipboard && window.isSecureContext) {
+  copyButton.hidden = false;
+  let resetTimer;
+  copyButton.addEventListener('click', async () => {
+    const status = document.querySelector('.copy-status');
+    clearTimeout(resetTimer);
+    try {
+      await navigator.clipboard.writeText('jili.you@mail.utoronto.ca');
+      status.textContent = 'Email copied!';
+    } catch {
+      status.textContent = 'Please select the email address to copy it.';
     }
-
-    function changeSlide(direction) {
-        currentSlide += direction;
-
-        // Loop back to the first/last slide
-        if (currentSlide >= slides.length) {
-            currentSlide = 0;
-        } else if (currentSlide < 0) {
-            currentSlide = slides.length - 1;
-        }
-
-        console.log(`Current Slide: ${currentSlide}`); // Debugging output
-        showSlide(currentSlide);
-    }
-
-    // Show the first slide initially
-    showSlide(currentSlide);
-
-    // Attach event listeners to navigation buttons
-    document.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
-    document.querySelector('.next').addEventListener('click', () => changeSlide(1));
+    resetTimer = setTimeout(() => { status.textContent = ''; }, 4500);
+  });
+}
+document.querySelectorAll('[data-year]').forEach(item => {
+  item.textContent = new Date().getFullYear();
 });
 
-
-function showEmail() {
-    const emailText = document.getElementById("email-text");
-    emailText.style.display = "inline"; // Make the email visible
-}
-
-function showEmail() {
-    const emailText = document.getElementById("email-text");
-    if (emailText.style.display === "none" || emailText.style.display === "") {
-        emailText.style.display = "inline"; // Show email
-    } else {
-        emailText.style.display = "none"; // Hide email
+if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const observer = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
     }
+  }, { threshold: 0.06 });
+  document.querySelectorAll('[data-reveal]').forEach(item => {
+    item.classList.add('will-reveal');
+    observer.observe(item);
+  });
 }
-
