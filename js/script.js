@@ -28,7 +28,6 @@ const filterBar = document.querySelector('.project-filters');
 if (filterBar) {
   filterBar.hidden = false;
   const cards = [...document.querySelectorAll('.project-card')];
-  const count = document.querySelector('.project-count');
   filterBar.addEventListener('click', event => {
     const button = event.target.closest('button[data-filter]');
     if (!button) return;
@@ -39,10 +38,53 @@ if (filterBar) {
     cards.forEach(card => {
       card.hidden = category !== 'all' && card.dataset.category !== category;
     });
-    const visibleCount = cards.filter(card => !card.hidden).length;
-    count.textContent = `${String(visibleCount).padStart(2, '0')} projects`;
   });
 }
+
+document.querySelectorAll('[data-photo-slider]').forEach(slider => {
+  const slides = [...slider.querySelectorAll('[data-photo-slide]')];
+  if (!slides.length) return;
+
+  const advanceButton = slider.querySelector('[data-photo-advance]');
+  const controls = slider.querySelector('[data-photo-controls]');
+  const status = slider.querySelector('[data-photo-status]');
+  const caption = slider.querySelector('[data-photo-caption-text]');
+  const fullSizeLink = slider.querySelector('[data-photo-full]');
+  let currentIndex = 0;
+
+  function showPhoto(index) {
+    currentIndex = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => {
+      slide.hidden = slideIndex !== currentIndex;
+    });
+
+    const activeSlide = slides[currentIndex];
+    const activeImage = activeSlide.querySelector('img');
+    if (activeImage) activeImage.loading = 'eager';
+    if (status) status.textContent = `${currentIndex + 1} / ${slides.length}`;
+    if (caption) caption.textContent = activeSlide.dataset.photoCaption || activeImage?.alt || '';
+    if (fullSizeLink) {
+      fullSizeLink.href = activeSlide.dataset.photoSrc || activeImage?.getAttribute('src') || '';
+      fullSizeLink.setAttribute('aria-label', `View full-size photo ${currentIndex + 1} of ${slides.length}`);
+    }
+    advanceButton?.setAttribute('aria-label', `Next photo (currently ${currentIndex + 1} of ${slides.length})`);
+  }
+
+  showPhoto(0);
+  if (slides.length < 2) return;
+
+  if (advanceButton) advanceButton.disabled = false;
+  if (controls) controls.hidden = false;
+  advanceButton?.addEventListener('click', () => showPhoto(currentIndex + 1));
+  slider.querySelector('[data-photo-next]')?.addEventListener('click', () => showPhoto(currentIndex + 1));
+  slider.querySelector('[data-photo-prev]')?.addEventListener('click', () => showPhoto(currentIndex - 1));
+  slider.addEventListener('keydown', event => {
+    if (event.altKey || event.ctrlKey || event.metaKey) return;
+    if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+    event.preventDefault();
+    showPhoto(currentIndex + (event.key === 'ArrowRight' ? 1 : -1));
+  });
+});
 
 const copyButton = document.querySelector('[data-copy-email]');
 if (copyButton && navigator.clipboard && window.isSecureContext) {

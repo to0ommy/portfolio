@@ -5,8 +5,26 @@
     "title": "Tumour-on-a-Chip Model",
     "category": "research",
     "categoryLabel": "Biomedical research",
-    "image": "images/project1.jpeg",
-    "imageAlt": "Tumour-on-a-chip research project",
+    "image": "images/tumour-on-a-chip/01-microscopy.jpeg",
+    "imageAlt": "Fluorescence microscopy of the tumour-on-a-chip model",
+    "gallery": [
+      {
+        "image": "images/tumour-on-a-chip/02-microscope.jpeg",
+        "imageAlt": "Microscope and imaging workstation"
+      },
+      {
+        "image": "images/tumour-on-a-chip/03-device.jpeg",
+        "imageAlt": "Fabricated microfluidic device"
+      },
+      {
+        "image": "images/tumour-on-a-chip/04-cad.png",
+        "imageAlt": "Microfluidic device design in Fusion 360"
+      },
+      {
+        "image": "images/tumour-on-a-chip/05-cell-culture.jpeg",
+        "imageAlt": "Cell culture workspace"
+      }
+    ],
     "summary": "Fabricating microfluidic devices and studying cells to model the tumour microenvironment in vitro.",
     "tags": ["Microfluidics", "Cell culture", "Microscopy"],
     "overview": "As a Research Assistant at the Integrative Biology and Microengineered Technologies (IBMT) Laboratory, I contributed to a tumour-on-a-chip platform under the mentorship of PhD student Han Shao and Professor Edmond Young. The platform models the tumour microenvironment in vitro.",

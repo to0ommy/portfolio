@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Official KiCad symbol, with authoring metadata removed and a scalable viewBox added.
+Source: https://github.com/KiCad/kicad-source-mirror/blob/master/resources/bitmaps_png/sources/light/kicad_logo_small.svg
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <rect fill="#314cb0" stroke="#1d2d68" stroke-width="0.91304731" width="23.783381" height="22.690393" x="1.1407627" y="2.6762671" rx="0.36130467" ry="0.31226811" />
+  <circle fill="#ff7700" stroke="#ff7700" stroke-width="0.91304731" cx="20.289881" cy="2.7199867" r="1.9236557" />
+  <path fill="#ffffff" fill-rule="evenodd" d="m 2.9377562,5.7786844 4.266176,0 0,5.9664636 4.8535478,-5.9664636 4.822633,0 -6.430178,8.0686366 6.430178,9.088809 -4.822633,0 -4.8535478,-6.492006 0,6.492006 -4.266176,0 0,-17.1574456 z" />
+  <rect fill="#ffffff" width="3.4624035" height="11.74744" x="19.044115" y="10.879547" />
+</svg>
