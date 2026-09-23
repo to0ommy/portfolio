@@ -50,10 +50,16 @@
     "title": "Graph Neural Networks for Production Planning",
     "category": "machine-learning",
     "categoryLabel": "Machine learning",
-    "image": "images/project2.jpeg",
-    "imageAlt": "Graph neural network production planning project",
+    "image": "images/vpdp/spectral-integer-prediction.png",
+    "imageAlt": "VPDP: Specformer encoder and CORAL ordinal head for integer production predictions",
+    "gallery": [
+      {
+        "image": "images/vpdp/star-capacity.png",
+        "imageAlt": "VPDP: vulcanization autoclave scheduling and star capacity for different hose types"
+      }
+    ],
     "summary": "Exploring graph neural networks for vulcanizing planning decisions in rubber manufacturing.",
-    "tags": ["Graph neural networks", "Scheduling", "Manufacturing"],
+    "tags": ["Graph Neural Networks", "Industrial Production Planning"],
     "overview": "This project explored graph neural networks (GNNs) for the Vulcanizing Planning Decision Problem in rubber manufacturing, representing the relationships between jobs, machines, and production constraints.",
     "sections": [
       {

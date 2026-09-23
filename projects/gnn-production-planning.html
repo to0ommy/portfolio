@@ -28,11 +28,23 @@
   <section class="project-hero" aria-labelledby="project-title">
     <a class="button back-link" href="../index.html"><span class="arrow" aria-hidden="true">←</span> Back to home</a>
     <div class="detail-heading"><div class="project-meta"><span class="project-number">02</span><span class="project-meta-separator" aria-hidden="true"></span><span>Machine learning</span></div><h1 id="project-title">Graph Neural Networks for Production Planning</h1><p class="detail-deck">Exploring graph neural networks for vulcanizing planning decisions in rubber manufacturing.</p></div>
-    <figure class="detail-image"><a href="../images/project2.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Open full-size project image"><img src="../images/project2.jpeg" alt="Graph neural network production planning project" fetchpriority="high"></a></figure>
-    <div class="detail-caption"><span>Graph neural network production planning project</span><a href="../images/project2.jpeg" target="_blank" rel="noopener noreferrer">View full image <span class="arrow" aria-hidden="true">↗</span></a></div>
+    <div class="project-photos" data-photo-slider role="region" aria-label="Project photos" aria-roledescription="carousel">
+    <figure class="detail-image">
+      <button class="photo-stage" type="button" data-photo-advance aria-label="Next photo (currently 1 of 2)" disabled>
+        <span class="photo-slide" data-photo-slide data-photo-src="../images/vpdp/spectral-integer-prediction.png" data-photo-caption="VPDP: Specformer encoder and CORAL ordinal head for integer production predictions"><img src="../images/vpdp/spectral-integer-prediction.png" alt="VPDP: Specformer encoder and CORAL ordinal head for integer production predictions" fetchpriority="high" decoding="async"></span>
+        <span class="photo-slide" data-photo-slide data-photo-src="../images/vpdp/star-capacity.png" data-photo-caption="VPDP: vulcanization autoclave scheduling and star capacity for different hose types" hidden><img src="../images/vpdp/star-capacity.png" alt="VPDP: vulcanization autoclave scheduling and star capacity for different hose types" loading="lazy" decoding="async"></span>
+      </button>
+      <figcaption class="detail-caption"><span data-photo-caption-text>VPDP: Specformer encoder and CORAL ordinal head for integer production predictions</span><a href="../images/vpdp/spectral-integer-prediction.png" data-photo-full target="_blank" rel="noopener noreferrer">View full image <span class="arrow" aria-hidden="true">↗</span></a></figcaption>
+    </figure>
+    <div class="photo-controls" data-photo-controls hidden>
+      <button type="button" data-photo-prev aria-label="Previous photo"><span class="arrow" aria-hidden="true">←</span></button>
+      <span class="photo-status" data-photo-status role="status" aria-live="polite" aria-atomic="true">1 / 2</span>
+      <button type="button" data-photo-next aria-label="Next photo"><span class="arrow" aria-hidden="true">→</span></button>
+    </div>
+  </div>
   </section>
   <div class="detail-body">
-    <aside class="project-sidebar" aria-label="Project information"><div class="sidebar-block"><h2>Field</h2><p>Machine learning</p></div><div class="sidebar-block"><h2>Topics &amp; tools</h2><ul class="tags" aria-label="Topics and tools"><li>Graph neural networks</li><li>Scheduling</li><li>Manufacturing</li></ul></div></aside>
+    <aside class="project-sidebar" aria-label="Project information"><div class="sidebar-block"><h2>Field</h2><p>Machine learning</p></div><div class="sidebar-block"><h2>Topics &amp; tools</h2><ul class="tags" aria-label="Topics and tools"><li>Graph Neural Networks</li><li>Industrial Production Planning</li></ul></div></aside>
     <article class="detail-copy" aria-label="About this project"><section><h2>Overview</h2><p>This project explored graph neural networks (GNNs) for the Vulcanizing Planning Decision Problem in rubber manufacturing, representing the relationships between jobs, machines, and production constraints.</p></section><section><h2>Graph representation</h2><p>The model used message passing across machine–job graphs to represent scheduling dependencies and variable–constraint relationships, incorporating demand and resource constraints.</p></section><section><h2>Model development</h2><p>Work focused on developing and tuning the GNN architecture and evaluating the balance between scalability and predictive accuracy on large problem instances.</p></section></article>
   </div>
   <nav class="project-return" aria-label="Return to home"><a class="button" href="../index.html"><span class="arrow" aria-hidden="true">←</span> Back to home</a></nav>
