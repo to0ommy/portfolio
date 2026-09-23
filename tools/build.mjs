@@ -38,7 +38,7 @@ function header(prefix = '') {
     <a class="brand" href="${home || '#top'}" aria-label="Jili You home"><span class="monogram" aria-hidden="true">JY</span><span>Jili You</span></a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="site-navigation">Menu <span aria-hidden="true">☰</span></button>
     <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
-      <a href="${home}#projects">Work</a><a href="${home}#about">About</a><a class="nav-contact" href="${home}#contact">Contact ${arrow()}</a>
+      <a href="${prefix}resume.pdf">Resume</a><a href="${home}#projects">Work</a><a href="${home}#about">About</a><a class="nav-contact" href="${home}#contact">Contact ${arrow()}</a>
     </nav>
   </div>
 </header>`;
