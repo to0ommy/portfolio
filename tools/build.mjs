@@ -49,7 +49,7 @@ function footer(prefix = '') {
 }
 
 function card(project, index) {
-  return `<article class="project-card" data-category="${escape(project.category)}" data-slug="${escape(project.slug)}" data-reveal>
+  return `<article class="project-card${project.featured ? ' project-card-featured' : ''}" data-category="${escape(project.category)}" data-slug="${escape(project.slug)}" data-reveal>
   <a class="project-link" href="projects/${escape(project.slug)}.html" aria-labelledby="action-${escape(project.slug)} title-${escape(project.slug)}">
     <div class="project-image"><img src="${escape(project.image)}" alt="${escape(project.imageAlt)}" loading="lazy" decoding="async">${index === 0 ? '<span class="project-card-label">In the lab</span>' : ''}</div>
     <div class="project-info">${meta(project)}

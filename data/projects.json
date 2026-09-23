@@ -1,6 +1,7 @@
 [
   {
     "slug": "tumour-on-a-chip",
+    "featured": true,
     "index": "01",
     "title": "Tumour-on-a-Chip Model",
     "category": "research",
@@ -46,6 +47,7 @@
   },
   {
     "slug": "gnn-production-planning",
+    "featured": true,
     "index": "02",
     "title": "Graph Neural Networks for Production Planning",
     "category": "machine-learning",
